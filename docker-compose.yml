@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: ../todo
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../todo:/var/www/todo
+    environment:
+      - RAILS_ENV=development
+      - DATABASE_URL=postgres://todo:123654@db:5432/todo_development
+      - TEST_DATABASE_URL=postgres://todo:123654@db:5432/todo_test
+    links:
+      - db
+  db:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_PASSWORD=123654
+      - POSTGRES_USER=todo
+      - POSTGRES_DB=todo_development
+    volumes:
+      - ~/todo_data:/var/lib/postgresql/data

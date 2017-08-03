@@ -12,7 +12,6 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'slim-rails'
-gem 'twitter-bootstrap-rails'
 gem 'simple_form'
 gem 'twitter-bootstrap-rails'
 

@@ -25,6 +25,8 @@ body{
 
   .action{
     opacity: 0;
+    margin: 0 10px;
+    font-size: 1.1em;
   }
   &:hover .action{
     opacity: 1;
@@ -43,6 +45,10 @@ body{
 .completed_true{
   color: #c0c0c0;
   text-decoration: line-through;
+
+  .done{
+    display: none;
+  }
 }
 .dobe{
   margin-left: 10px;
@@ -50,3 +56,4 @@ body{
 .complete_true .title{
   display: none;
 }
+

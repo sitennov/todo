@@ -1,13 +1,14 @@
 html
   head
-    title
-      | Todo
+    title Todo
     = csrf_meta_tags
 
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    <script src="https://use.fontawesome.com/60fa595454.js"></script>
 
   body
     .container
       .row
+        = render "layouts/flash_messages"
         = yield
